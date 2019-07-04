@@ -7,6 +7,14 @@ public class Object {
     private String type;
     private String name;
     private int stock;
+    private String img;
+    public Object() {
+
+    }
+
+    public Object(String type) {
+        this.type = type;
+    }
 
     public int getId() {
         return id;
@@ -46,5 +54,13 @@ public class Object {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

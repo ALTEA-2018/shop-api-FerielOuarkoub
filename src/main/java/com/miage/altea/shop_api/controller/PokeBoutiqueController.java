@@ -1,26 +1,46 @@
 package com.miage.altea.shop_api.controller;
 
 
-import com.miage.altea.shop_api.service.PokeBoutiqueService;
+
+import com.miage.altea.shop_api.service.ObjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Objects;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.miage.altea.shop_api.bo.Object;
+
 
 @Controller
 
 public class PokeBoutiqueController {
 
+    private ObjectService objectService;
+
     @GetMapping(value = "/shop")
-    public String pokeBoutique() {
-        return "pokeBoutique";
+    public ModelAndView pokeBoutique() {
+
+        List<Object> objects = this.objectService.findAllObject();
+        Map<String,java.lang.Object> map = new HashMap<>();
+        map.put("objects",objects);
+        return new ModelAndView("pokeBoutique",map);
+
+
     }
 
-  //  private final PokeBoutiqueService pokeBoutiqueService;
+
+
+
+    @Autowired
+    public void setObjectService(ObjectService objectService) {
+        this.objectService = objectService;
+    }
+
+    //  private final PokeBoutiqueService pokeBoutiqueService;
 
     /**
     @Autowired

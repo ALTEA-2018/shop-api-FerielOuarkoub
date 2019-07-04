@@ -11,105 +11,27 @@
     <h1 class="pt-md-5 pb-md-5">PokeRoom</h1>
 
     <div class="card-deck">
-
+        {{#objects}}
         <div class="col-md-4">
             <div class="card shadow-sm mb-4">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"> Rappel<span class="badge badge-secondary"></span></h4>
+                    <h4 class="my-0 font-weight-normal"> {{type}}<span class="badge badge-secondary"></span></h4>
 
-                    <img class="card-img-top" src="/images/rappel.jpg" alt="Pokemon"/>
+                    <img class="card-img-top" src={{img}} alt="Pokemon"/>
                 </div>
 
                 <div class="card-body">
-                    <span class="badge badge-primary">Price : </span>
-                    <span class="badge badge-primary">Name : </span>
-                    <span class="badge badge-primary">Stock : </span>
-                    <span class="badge badge-primary">Solde : </span>
+                    <span class="badge badge-primary">Price : {{price}} </span>
+                    <span class="badge badge-primary">Name : {{name}}</span>
+                    <span class="badge badge-primary">Stock : {{stock}}</span>
+                    <span class="badge badge-primary">Solde : nooon </span>
 
                 </div>
                 <button type="button" class="btn btn-danger">Je le veux !</button>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"> Super Potion <span class="badge badge-secondary"></span></h4>
-
-                    <img class="card-img-top" src="/images/potion.jpg" alt="Pokemon"/>
-                </div>
-
-                <div class="card-body">
-                    <span class="badge badge-primary">Price : </span>
-                    <span class="badge badge-primary">Name : </span>
-                    <span class="badge badge-primary">Stock : </span>
-                    <span class="badge badge-primary">Solde : </span>
-
-                </div>
-                <button type="button" class="btn btn-danger">Je le veux !</button>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"> Antidote <span class="badge badge-secondary"></span></h4>
-
-                    <img class="card-img-top" src="/images/pokemoney.png" alt="Pokemon"/>
-                </div>
-
-                <div class="card-body">
-                    <span class="badge badge-primary">Price : </span>
-                    <span class="badge badge-primary">Name : </span>
-                    <span class="badge badge-primary">Stock : </span>
-                    <span class="badge badge-primary">Solde : </span>
-
-                </div>
-                <button type="button" class="btn btn-danger">Je le veux !</button>
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"> PokeBall <span class="badge badge-secondary"></span></h4>
-
-                    <img class="card-img-top" src="/images/ball.jpg" alt="Pokemon"/>
-                </div>
-
-                <div class="card-body">
-                    <span class="badge badge-primary">Price : </span>
-                    <span class="badge badge-primary">Name : </span>
-                    <span class="badge badge-primary">Stock : </span>
-                    <span class="badge badge-primary">Solde : </span>
-
-                </div>
-                <button type="button" class="btn btn-danger">Je le veux !</button>
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow-sm mb-4">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"> SuperBall <span class="badge badge-secondary"></span></h4>
-
-                    <img class="card-img-top" src="/images/superBall.png" alt="Pokemon"/>
-                </div>
-
-                <div class="card-body">
-                    <span class="badge badge-primary">Price : </span>
-                    <span class="badge badge-primary">Name : </span>
-                    <span class="badge badge-primary">Stock : </span>
-                    <span class="badge badge-primary">Solde : </span>
-
-                </div>
-                <button type="button" class="btn btn-danger">Je le veux !</button>
-            </div>
-
-        </div>
-
+        {{/objects}}
     </div>
 
 </div>

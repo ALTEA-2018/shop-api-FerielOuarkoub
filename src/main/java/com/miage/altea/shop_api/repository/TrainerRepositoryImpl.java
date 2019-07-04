@@ -33,4 +33,12 @@ public class TrainerRepositoryImpl implements TrainerRepository {
     public void save(Trainer trainer) {
         this.trainers.add(trainer);
     }
+
+    @Override
+    public void addMoney(int qteMoney, String name) {
+        var trainer = this.findTrainerByName(name);
+         trainer.setPokeMoney(trainer.getPokeMoney()+ qteMoney * 1000);
+    }
+
+
 }

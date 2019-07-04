@@ -10,4 +10,6 @@ public interface TrainerRepository {
     Trainer findTrainerById(int id);
     Trainer findTrainerByName(String name);
     void save(Trainer trainer);
+    void addMoney(int qteMoney, String name);
+
 }

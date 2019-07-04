@@ -1,4 +1,5 @@
 package com.miage.altea.shop_api.repository;
+import com.miage.altea.shop_api.bo.Object;
 
 import java.util.List;
 

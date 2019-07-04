@@ -9,9 +9,30 @@
 <div class="container">
     <h1 class="pt-md-5 pb-md-5">Voici ton Sac à dos  </h1>
 
-
 </div>
 
+<div class="card-deck">
+    {{#trainer.bag}}
+    <div class="col-md-4">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal"> {{type}}<span class="badge badge-secondary"></span></h4>
+
+                <img class="card-img-top" src={{img}} alt="Pokemon"/>
+            </div>
+
+            <div class="card-body">
+
+                <span class="badge badge-primary">Name : {{name}}</span>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    {{/trainer.bag}}
+</div>
 
 </body>
 </html>

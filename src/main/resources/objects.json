@@ -1,0 +1,51 @@
+
+[
+  {
+    "id" : 1,
+    "name" : "P1",
+    "price" : 22,
+    "type" : "Rappel",
+    "stock" : 5,
+    "img" : "/images/pokeMoney.png"
+
+  },
+
+  {
+    "id" : 2,
+    "name" : "Ppotit",
+    "price" : 100,
+    "type" : "Super Potion",
+    "stock" : 10,
+    "img" : "/images/potion.jpg"
+  },
+
+  {
+    "id" : 3,
+    "name" : "Colonel",
+    "price" : 66,
+    "type" : "Antidote",
+    "stock" : 5,
+    "img" : "/images/rappel.jpg"
+
+
+  },
+  {
+    "id" : 4,
+    "name" : "P1",
+    "price" : 88,
+    "type" : "PokeBall",
+    "stock" : 8,
+    "img" : "/images/ball.png"
+
+  },
+  {
+    "id" : 5,
+    "name" : "baballe",
+    "price" : 22,
+    "type" : "SuperBall",
+    "stock" : 15,
+    "img" : "/images/superBall.png"
+
+  }
+
+]
