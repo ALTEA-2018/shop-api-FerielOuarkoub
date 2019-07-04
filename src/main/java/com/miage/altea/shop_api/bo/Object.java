@@ -8,5 +8,43 @@ public class Object {
     private String name;
     private int stock;
 
+    public int getId() {
+        return id;
+    }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }

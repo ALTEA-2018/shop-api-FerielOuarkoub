@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> layout/header}}
+
+<body>
+{{> layout/toolbar}}
+
+<form>
+    <div class="form-group">
+        <label for="euro">Euros</label>
+        <input type="eur" class="form-control" id="euro" aria-describedby="euroBuy" placeholder="Combien veux tu acheter">
+        <small id="euroHelp" class="form-text text-muted">Fais chauffer la carte bleue ! </small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Valider</button>
+</form>
+
+</body>
+</html>
