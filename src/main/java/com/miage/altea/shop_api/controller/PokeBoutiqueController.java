@@ -2,8 +2,13 @@ package com.miage.altea.shop_api.controller;
 
 
 
+import com.miage.altea.shop_api.bo.Trainer;
 import com.miage.altea.shop_api.service.ObjectService;
+import com.miage.altea.shop_api.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -20,13 +25,20 @@ import com.miage.altea.shop_api.bo.Object;
 public class PokeBoutiqueController {
 
     private ObjectService objectService;
+    private TrainerService trainerService;
 
     @GetMapping(value = "/shop")
     public ModelAndView pokeBoutique() {
 
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails principal = (UserDetails) authentication.getPrincipal();
+        Trainer trainer = this.trainerService.findTrainerByName(principal.getUsername());
         List<Object> objects = this.objectService.findAllObject();
-        Map<String,java.lang.Object> map = new HashMap<>();
+        Map<String, java.lang.Object> map = new HashMap<>();
+        map.put("trainer",trainer);
         map.put("objects",objects);
+
+
         return new ModelAndView("pokeBoutique",map);
 
 
@@ -38,6 +50,11 @@ public class PokeBoutiqueController {
     @Autowired
     public void setObjectService(ObjectService objectService) {
         this.objectService = objectService;
+    }
+
+    @Autowired
+    public void setTrainerService(TrainerService trainerService) {
+        this.trainerService = trainerService;
     }
 
     //  private final PokeBoutiqueService pokeBoutiqueService;
