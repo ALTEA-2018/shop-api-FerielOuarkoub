@@ -39,6 +39,7 @@ public class PokeBoutiqueController {
         Trainer trainer = this.trainerService.findTrainerByName(principal.getUsername());
         List<Object> objects = this.objectService.findAllObject();
         Map<String, java.lang.Object> map = new HashMap<>();
+        map.put("message", "Bienvenue sur pokeRoom prive !");
         map.put("trainer",trainer);
         map.put("objects",objects);
 

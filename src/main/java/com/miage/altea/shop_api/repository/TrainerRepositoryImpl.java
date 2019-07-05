@@ -1,6 +1,7 @@
 package com.miage.altea.shop_api.repository;
 
 import com.miage.altea.shop_api.bo.Trainer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import com.miage.altea.shop_api.bo.Object;
 import java.util.ArrayList;
@@ -44,9 +45,9 @@ public class TrainerRepositoryImpl implements TrainerRepository {
 
     @Override
     public boolean addObject(int idObject, String name) {
+
         var trainer = this.trainers.stream().filter(p -> p.getName().equals(name)).findFirst().orElse(null);
         var object = this.objectRepository.findObjectId(idObject);
-
         if ((trainer.getPokeMoney() < object.getPrice() ) && (object.getStock() <= 0)) {
             return false;
 
@@ -62,7 +63,8 @@ public class TrainerRepositoryImpl implements TrainerRepository {
         return true;
     }
 
-
-
-
+    @Autowired
+    public void setObjectRepository(ObjectRepository objectRepository) {
+        this.objectRepository = objectRepository;
+    }
 }
