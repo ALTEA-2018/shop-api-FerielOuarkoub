@@ -11,5 +11,6 @@ public interface TrainerRepository {
     Trainer findTrainerByName(String name);
     void save(Trainer trainer);
     void addMoney(int qteMoney, String name);
+    boolean addObject(int idObject, String name);
 
 }

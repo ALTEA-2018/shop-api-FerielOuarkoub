@@ -10,5 +10,6 @@ public interface TrainerService {
     Trainer findTrainerById(int id);
     Trainer findTrainerByName(String name);
     void addMoney(int qteMoney, String name);
+    boolean addObject(int idObject, String name);
 
 }

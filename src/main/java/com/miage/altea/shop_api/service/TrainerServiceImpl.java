@@ -36,6 +36,12 @@ public class TrainerServiceImpl implements TrainerService {
         this.trainerRepository.addMoney(qteMoney,name);
     }
 
+    @Override
+    public boolean addObject(int idObject, String name) {
+        return this.trainerRepository.addObject(idObject, name);
+    }
+
+
     @Autowired
     public void setTrainerRepository(TrainerRepository trainerRepository) {
         this.trainerRepository = trainerRepository;

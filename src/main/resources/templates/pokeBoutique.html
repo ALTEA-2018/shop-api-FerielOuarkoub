@@ -7,7 +7,9 @@
 <body>
 
 {{> layout/toolbar}}
-<div class="container">
+<div class="container pt-4">
+
+
     <h1 class="pt-md-5 pb-md-5">PokeRoom</h1>
 
     <div class="card-deck">
@@ -26,13 +28,21 @@
                     <span class="badge badge-primary">Stock : {{stock}}</span>
                     <span class="badge badge-primary">Solde : nooon </span>
 
+                    <form action="/addObject" method="post" class="col-md-12 pb-2">
+                        <input style="display: none" name="id" value="{{id}}">
+                        <button type="button" style="width: 100%" class="btn btn-danger">Je le veux</button>
+                    </form>
+
+
                 </div>
-                <button type="button" class="btn btn-danger">Je le veux !</button>
+
+
             </div>
         </div>
 
         {{/objects}}
     </div>
+
 
 </div>
 </body>

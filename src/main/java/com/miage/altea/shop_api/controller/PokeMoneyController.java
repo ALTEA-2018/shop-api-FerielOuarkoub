@@ -2,7 +2,6 @@ package com.miage.altea.shop_api.controller;
 
 
 import com.miage.altea.shop_api.bo.Trainer;
-import com.miage.altea.shop_api.service.ObjectService;
 import com.miage.altea.shop_api.service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
