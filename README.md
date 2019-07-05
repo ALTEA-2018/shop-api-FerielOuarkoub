@@ -14,6 +14,6 @@ Mot de pass : rhum
 
 # Les informations
 
-Les informations du user notemment son solde de pokeMoney se trouvent dans l'onglet pokeSac
+Les informations du drésseur notamment son solde de pokeMoney se trouvent dans l'onglet pokeSac
 
 
