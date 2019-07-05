@@ -35,7 +35,7 @@ public class Application {
             Object obj = new Object ("Potion");
             Object obj2 = new Object ("Rappel");
             obj.setId(22);
-            obj2.setId(44);
+            obj2.setId(2);
             obj.setName("bananasplit");
             obj2.setName("help");
             obj.setPrice(300);

@@ -19,8 +19,8 @@ public class ObjectRepositoryImpl implements ObjectRepository {
         try {
             var objectsStream = new ClassPathResource("objects.json").getInputStream();
             var objectMapper = new ObjectMapper();
-            var itemsArray = objectMapper.readValue(objectsStream, Object[].class);
-            this.objects = Arrays.asList(itemsArray);
+            var objectsArray = objectMapper.readValue(objectsStream, Object[].class);
+            this.objects = Arrays.asList(objectsArray);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,7 +29,10 @@ public class ObjectRepositoryImpl implements ObjectRepository {
 
     @Override
     public Object findObjectId(int id) {
-        return null;
+
+        return this.objects.stream().filter(i -> i.getId() == id).findFirst().orElse(null);
+
+
     }
 
     @Override

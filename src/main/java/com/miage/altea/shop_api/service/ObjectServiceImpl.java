@@ -18,6 +18,8 @@ public class ObjectServiceImpl implements ObjectService {
         return null;
     }
 
+
+
     @Override
     public Object findObjectByName(String name) {
         return null;
@@ -34,3 +36,6 @@ public class ObjectServiceImpl implements ObjectService {
         this.objectRepository = objectRepository;
     }
 }
+
+
+
